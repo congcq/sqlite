@@ -21,5 +21,10 @@ jobs:
               run: |
                 ./configure --host=arm64-apple-darwin CC="clang -arch arm64"
                 make
-                ls
+
+            - name: upload dylib
+              uses: actions/upload-artifact@main
+              with:
+                name: libsqlite3
+                path: ./libsqlite3.dylib
                 
