@@ -1,0 +1,23 @@
+name: ios build
+
+on:
+    push:
+    pull_request:
+        
+jobs:
+    build:
+        name: ios build
+        runs-on: macos-latest
+        
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@main
+              
+            - name: install include tools
+              run: brew install make
+              
+            - name: build for ios
+              run: |
+                ./configure --host=arm64-apple-darwin
+                make
+                
