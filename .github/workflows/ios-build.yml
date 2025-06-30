@@ -19,7 +19,7 @@ jobs:
               
             - name: build for ios
               run: |
-                ./configure --host=arm64-apple-darwin CC="clang -arch arm64"
+                ./configure --host=arm64-apple-darwin CC="clang -arch ios-arm64"
                 make
 
             - name: upload dylib
