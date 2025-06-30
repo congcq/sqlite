@@ -19,7 +19,6 @@ jobs:
               
             - name: build for ios
               run: |
-                ./configure --host=arm64-apple-darwin-cc
-                CC="clang -arch arm64"
+                ./configure --host=arm64-apple-darwin CC="clang -arch arm64"
                 make
                 
