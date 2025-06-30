@@ -28,4 +28,10 @@ jobs:
               with:
                 name: libsqlite3
                 path: ./libsqlite3.dylib
+
+            - name: upload dylib
+              uses: actions/upload-artifact@main
+              with:
+                name: libsqlite3
+                path: ./libsqlite3.so
                 
