@@ -21,6 +21,7 @@ jobs:
               run: |
                 ./configure --host=arm64-apple-ios CC="clang -arch arm64"
                 make
+                ls
 
             - name: upload dylib
               uses: actions/upload-artifact@main
