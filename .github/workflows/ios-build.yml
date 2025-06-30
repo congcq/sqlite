@@ -14,10 +14,13 @@ jobs:
               uses: actions/checkout@main
               
             - name: install include tools
-              run: brew install make
+              run: |
+                brew install make
+                xcode-select --install
               
             - name: build for ios
               run: |
                 ./configure --host=arm64-apple-darwin
+                CC="clang -arch arm64"
                 make
                 
