@@ -16,7 +16,6 @@ jobs:
             - name: install include tools
               run: |
                 brew install make
-                #xcode-select --install
               
             - name: build for ios
               run: |
